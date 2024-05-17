@@ -21,8 +21,8 @@
     </style>
 </head>
 <body>
-    <div class="header"><h1>Week 3</h1>
-        <p>[Insert your response to task 2 here.]</p></div>
+    <div class="header"><h1>[Insert a title]</h1>
+        <p>[Insert some descriptive text here.]</p></div>
     <div id="app">Verovio is loading...</div>
     <script type="module">
         import 'https://www.verovio.org/javascript/app/verovio-app.js';
@@ -34,10 +34,10 @@
             enableDocument: true // default is true
         }
         
-        // A MusicXML file
-        var file = 'data/example.mei';
         // A MEI file
-        //var file = 'https://www.verovio.org/editor/brahms.mei';
+        var file = 'data/example.mei';
+        // A MusicXML file
+        //var file = 'https://www.verovio.org/editor/brahms.xml';
         
         const app = new Verovio.App(document.getElementById("app"), options);
         fetch(file)
