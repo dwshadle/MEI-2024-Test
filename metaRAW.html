@@ -5,10 +5,30 @@
   <link rel="stylesheet" href="css/myMeta.css" media="all" />
   <link rel="stylesheet" href="css/style.css" media="all" />
   <script src="js/CETEI.js"></script>
+  <style>
+       html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .box {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+        }
+        .box #MEImeta {
+           flex: 0 1 auto;
+        }
+        .box #app {
+            flex: 1 1 auto;
+        }
+    </style>
 </head>
 <body>
+  <div id="box">
   <div id="MEImeta"></div>
   <div id="app">Verovio is loading...</div>
+</div>
   <script type="module">
       import 'https://www.verovio.org/javascript/app/verovio-app.js';
       const options = {
