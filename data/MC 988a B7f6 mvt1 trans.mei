@@ -7,7 +7,7 @@
          <titleStmt xml:id="td07sq3">
             <title>String Quartet</title>
             <respStmt>
-               <persName role="composer" auth.uri="https://musicbrainz.org/artist/b8f27069-283c-4a2d-979a-7ee9e0b49c75" auth="MusicBrainz">Florence B. Price</persName>
+               <persName role="composer" startdate="1888-04-07" enddate="1953-06-03" auth.uri="https://musicbrainz.org/artist/b8f27069-283c-4a2d-979a-7ee9e0b49c75" auth="MusicBrainz">Florence B. Price</persName>
                <persName role="transcriber">Tao-Tao (Trevor) He</persName>
                <persName role="encoder">Douglas Shadle</persName>
             </respStmt>
