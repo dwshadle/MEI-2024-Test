@@ -3,71 +3,93 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Understanding the structure of the SVG</title>
-        <!-- A stylesheet for modifying the appearance of the output -->
-        <link href="solution.css" rel="stylesheet" type="text/css" />
+        <title>Interacting with editorial markup</title>
+        <!-- A stylesheet for modifying the appearance of the editorial markup -->
+        <link href="editorial-markup.css" rel="stylesheet" type="text/css" />
         <!-- Verovio -->
         <script src="https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js" defer></script>
     </head>
     <body>
+        <button id="original">Original</button>
+        <button id="contrafactum">Contrafactum</button>
+        <button id="prevPage">Previous page</button>
+        <button id="nextPage">Next page</button>
+        <div id="notation"></div>
         <script>
+            /** 
+             Load Verovio
+            **/
             document.addEventListener("DOMContentLoaded", (event) => {
-                verovio.module.onRuntimeInitialized = function () {
-                    // This line initializes the Verovio toolkit
-                    const tk = new verovio.toolkit();
+            verovio.module.onRuntimeInitialized = function () {
+                // This line initializes the Verovio toolkit
+                const tk = new verovio.toolkit();
 
-                    let zoom = 80;
-                    let pageHeight = document.body.clientHeight * 100 / zoom;
-                    let pageWidth = document.body.clientWidth * 100 / zoom;
+                // An array to keep xpath queries for selecting editorial markup
+                let appXPath = [];
 
-                    options = {
-                        pageHeight: pageHeight,
-                        pageWidth: pageWidth,
-                        scale: zoom,
-                        // Add an option to pass note@pname and note@oct as svg @data-*
-                        svgAdditionalAttribute: ["note@pname", "note@oct"]
-                    };
-                    tk.setOptions(options);
+                // Keep a variable to the notation div id
+                let notationElement = document.getElementById("notation");
 
-                    // This line fetches the MEI file we want to render...
-                    fetch('https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei')
+                // A function that loads the file
+                function loadFile() {
+
+                    fetch("https://raw.githubusercontent.com/marenzio/marenzio.github.io/master/mei/M-04-6/M_04_6_02_Di_nettare_amoroso_ebro_la_mente.mei")
                         // ... then receives the response and "unpacks" the MEI from it
                         .then((response) => response.text())
-                        .then((mei) => {
-                            // ... then we can load the data into Verovio ...
-                            tk.loadData(mei);
-                            // ... and generate the SVG for the first page
-                            let svg = tk.renderToSVG(1);
-                            // ... and finally gets the <div> element with the ID we specified, 
-                            // and sets the content (innerHTML) to the SVG that we just generated.
-                            document.getElementById("notation").innerHTML = svg;
-
-                            // Get all the rests by selecting <g> with attribute class 'rest' ...
-                            let rests = document.querySelectorAll('g.rest');
-                            // ... and change their color by setting their style.fill value
-                            for (let rest of rests) {
-                                rest.style.fill = "dodgerblue";
-                            }
-
-                            // Get all the notes with @pname="c" and @oct="5" and change their color
-                            let c5s = document.querySelectorAll('g[data-pname="c"][data-oct="5"]');
-                            for (let c5 of c5s) {
-                                c5.style.fill = "aqua";
-                            }
-
-                            // Get all the verses ...
-                            let verses = document.querySelectorAll('g.verse');
-                            // ... and use the 'getElementAttr()' to retrieve all attributes ...
-                            for (let verse of verses) {
-                                let attr = tk.getElementAttr(verse.id);
-                                // ... and change to color when @n exists and is greater than 1
-                                if (attr.n && attr.n > 1) verse.style.fill = "darkcyan";
-                            }
+                        .then((meiXML) => {
+                        // First we set the options, including the appXPathQuery one
+                        tk.setOptions({
+                            pageWidth: document.body.clientWidth,
+                            pageHeight: document.body.clientHeight,
+                            scale: 50,
+                            scaleToPageSize: true,
+                            appXPathQuery: appXPath
                         });
+                        // ... then we can load the data into Verovio ...
+                        tk.loadData(meiXML);
+                        // ... and generate and set the SVG for the current page ...
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                        });
+                    }
+
+                    // The current page, which will change when playing through the piece
+                    let currentPage = 1;
+
+                    /**
+                        Wire up the button to actually work.
+                    */
+                    const nextPageHandler = function () {
+                        currentPage = Math.min(currentPage + 1, tk.getPageCount());
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                    }
+
+                    const prevPageHandler = function () {
+                        currentPage = Math.max(currentPage - 1, 1);
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                    }
+
+                    const originalHandler = function () {
+                        appXPath = [];
+                        loadFile();
+                    }
+
+                    const contrafactumHandler = function () {
+                        appXPath = ["./rdg[@source='English']"];
+                        loadFile();
+                    }
+
+                    /**
+                        Wire up the buttons to actually work.
+                    */
+                    document.getElementById("nextPage").addEventListener("click", nextPageHandler);
+                    document.getElementById("prevPage").addEventListener("click", prevPageHandler);
+                    document.getElementById("original").addEventListener("click", originalHandler);
+                    document.getElementById("contrafactum").addEventListener("click", contrafactumHandler);
+
+                    // This line fetches the MEI file we want to render...
+                    loadFile();
                 }
             });
         </script>
-        <!-- The div where we are going to insert the SVG -->
-        <div id="notation" />
     </body>
 </html>
