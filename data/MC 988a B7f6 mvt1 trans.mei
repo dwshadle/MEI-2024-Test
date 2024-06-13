@@ -75,10 +75,10 @@
                      <staff xml:id="s16s7rq5" n="1">
                         <layer xml:id="l17zxvh1" n="1">
                            <app>
-                              <rdg source="Shadle1">
+                              <rdg source="#Shadle1">
                                  <note xml:id="n15x802z" dots="1" dur.ppq="36" dur="2" oct="4" pname="g" stem.dir="up" />
                               </rdg>
-                              <rdg source="Shadle2">
+                              <rdg source="#Shadle2">
                                  <note dots="1" dur.ppq="36" dur="2" oct="4" pname="b" stem.dir="up" />
                               </rdg>
                            </app>
