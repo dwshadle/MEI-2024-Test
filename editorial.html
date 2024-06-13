@@ -33,7 +33,7 @@
                 // A function that loads the file
                 function loadFile() {
 
-                    fetch("https://raw.githubusercontent.com/marenzio/marenzio.github.io/master/mei/M-04-6/M_04_6_02_Di_nettare_amoroso_ebro_la_mente.mei")
+                    fetch("data/MC 988a B7f6 mvt1 trans.mei")
                         // ... then receives the response and "unpacks" the MEI from it
                         .then((response) => response.text())
                         .then((meiXML) => {
@@ -74,7 +74,7 @@
                     }
 
                     const contrafactumHandler = function () {
-                        appXPath = ["./rdg[@source='English']"];
+                        appXPath = ["./rdg[@source='Shadle2']"];
                         loadFile();
                     }
 
