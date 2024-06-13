@@ -10,8 +10,8 @@
         <script src="https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js" defer></script>
     </head>
     <body>
-        <button id="original">Original</button>
-        <button id="contrafactum">Contrafactum</button>
+        <button id="original">Shadle 1</button>
+        <button id="contrafactum">Shadle 2</button>
         <button id="prevPage">Previous page</button>
         <button id="nextPage">Next page</button>
         <div id="notation"></div>
@@ -74,7 +74,7 @@
                     }
 
                     const contrafactumHandler = function () {
-                        appXPath = ["./rdg"];
+                        appXPath = ["./rdg[@source='#Shadle2'"];
                         loadFile();
                     }
 
