@@ -624,9 +624,7 @@
                                  <app>
                                     <rdg source="#MC988aB7F3Sc"></rdg>
                                     <rdg source="#MC988aB7F3P1">
-                                       <artic xml:id="aikxhmi" type="technical" artic="dnbow">
-                                          <color>#ff0000"</color>
-                                       </artic>
+                                       <artic xml:id="aikxhmi" type="technical" artic="dnbow" color="red" />
                                     </rdg>
                                  </app>
                               </note>
