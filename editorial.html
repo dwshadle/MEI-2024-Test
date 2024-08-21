@@ -73,10 +73,17 @@
                         loadFile();
                     }
 
+                   
                     const contrafactumHandler = function () {
-                        appXPath = ["./rdg[@source='#MC988aB7F3P1']"];
-                        loadFile();
-                    }
+                      appXPath = ["./rdg[@source='#MC988aB7F3P1']"];
+                      loadFile();
+
+                      // Apply the custom style to matching elements
+                     const matchingElements = tk.query(appXPath);
+                      for (const element of matchingElements) {
+                       element.setAttribute("style", "fill: red;"); // Replace "red" with your desired color
+                      }
+                    };
 
                     /**
                         Wire up the buttons to actually work.
