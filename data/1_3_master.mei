@@ -214,7 +214,7 @@
                      <app>
                         <rdg source="#MC988aB7F3Sc"></rdg>
                         <rdg source="#MC988aB7F3P1">
-                           <fing xml:id="fvzmlc4" staff="#s1bs1l3p" startid="#nujzxt3">2</fing>
+                           <fing xml:id="fvzmlc4" startid="#nujzxt3" place="above">2</fing>
                         </rdg>
                      </app>
                   </measure>
