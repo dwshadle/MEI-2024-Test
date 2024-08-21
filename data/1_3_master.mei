@@ -214,7 +214,7 @@
                      <app>
                         <rdg source="#MC988aB7F3Sc"></rdg>
                         <rdg source="#MC988aB7F3P1">
-                           <fing xml:id="fvzmlc4" staff="3" startid="#nqv5ong">2</fing>
+                           <fing xml:id="fvzmlc4" staff="#s1bs1l3p" startid="#nujzxt3">2</fing>
                         </rdg>
                      </app>
                   </measure>
@@ -624,7 +624,9 @@
                                  <app>
                                     <rdg source="#MC988aB7F3Sc"></rdg>
                                     <rdg source="#MC988aB7F3P1">
-                                       <artic xml:id="aikxhmi" type="technical" artic="dnbow" />
+                                       <artic xml:id="aikxhmi" type="technical" artic="dnbow">
+                                          <color>#ff0000"</color>
+                                       </artic>
                                     </rdg>
                                  </app>
                               </note>
