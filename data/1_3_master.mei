@@ -747,8 +747,8 @@
                      <app>
                         <rdg source="#MC988aB7F3Sc"></rdg>
                         <rdg source="#MC988aB7F3P1">
-                           <hairpin xml:id="h7a3wed" staff="3" tstamp="2.500000" tstamp2="0m+3.0000" form="dim" place="below" vgrp="660" />
-                           <fing xml:id="fxy5rxq" staff="4" startid="#n1dehlce">4</fing>
+                           <hairpin xml:id="h7a3wed" staff="3" tstamp="2.500000" tstamp2="0m+3.0000" form="dim" place="below" vgrp="660" color="red"/>
+                           <fing xml:id="fxy5rxq" staff="4" startid="#n1029odi" place="above">4</fing>
                         </rdg>
                      </app>
                   </measure>
@@ -853,7 +853,7 @@
                                     <note xml:id="n4zl20n" dur.ppq="1" dur="16" oct="4" pname="d" stem.dir="up" />
                                  </rdg>
                                  <rdg source="#MC988aB7F3P1">
-                                    <note dur.ppq="1" dur="16" oct="4" pname="e" stem.dir="up" />
+                                    <note dur.ppq="1" dur="16" oct="4" pname="e" stem.dir="up" color="red"/>
                                  </rdg>
                               </app>
                            </beam>
@@ -1451,8 +1451,8 @@
                         <rdg source="#MC988aB7F3Sc">
                         </rdg>
                         <rdg source="#MC988aB7F3P1">
-                           <tie xml:id="thv1ib1" startid="#n6cx9f1" endid="#n1fqjghh" />
-                           <fing xml:id="n9wp8e1" staff="4" startid="#n1mqyf4g">2</fing>
+                           <tie xml:id="thv1ib1" startid="#n6cx9f1" endid="#n1fqjghh" color="red" />
+                           <fing staff="4" startid="#n9wp8e1">2</fing>
                         </rdg>
                      </app>
                   </measure>
@@ -1490,14 +1490,14 @@
                                  </beam>
                               </rdg>
                               <rdg source="#MC988aB7F3P1">
-                                 <note xml:id="n1fqjghh" dur.ppq="4" dur="4" oct="4" pname="d" stem.dir="up">
+                                 <note xml:id="n1fqjghh" dur.ppq="4" dur="4" oct="4" pname="d" stem.dir="up" color="red">
                                     <accid xml:id="a8iwdoa" accid="f" />
                                  </note>
                                  <beam xml:id="ba9kb6b">
-                                    <note xml:id="n19wp6kw" dur.ppq="2" dur="8" oct="3" pname="b" stem.dir="up">
+                                    <note xml:id="n19wp6kw" dur.ppq="2" dur="8" oct="3" pname="b" stem.dir="up" color="red">
                                        <accid xml:id="a10ron9z" accid="f" />
                                     </note>
-                                    <note xml:id="n18dkvp1" dur.ppq="2" dur="8" oct="4" pname="c" stem.dir="up" />
+                                    <note xml:id="n18dkvp1" dur.ppq="2" dur="8" oct="4" pname="c" stem.dir="up" color="red" />
                                  </beam>
                               </rdg>
                            </app>
@@ -1626,7 +1626,7 @@
                                     <note xml:id="n1rdinsr" dur.ppq="2" dur="8" oct="4" pname="e" stem.dir="up" accid.ges="f" />
                                  </rdg>
                                  <rdg source="#MC988aB7F3P1">
-                                    <note xml:id="nee1vyt" dur.ppq="2" dur="8" oct="4" pname="d" stem.dir="up">
+                                    <note xml:id="nee1vyt" dur.ppq="2" dur="8" oct="4" pname="d" stem.dir="up" color="red">
                                        <accid xml:id="a1nyukoq" accid="s" />
                                     </note>
                                  </rdg>
@@ -2074,7 +2074,7 @@
                                     <note xml:id="n6n9my6" dur.ppq="2" dur="8" oct="3" pname="f" stem.dir="up" accid.ges="s" />
                                  </rdg>
                                  <rdg source="#MC988aB7F3P1">
-                                    <note xml:id="nh0l2pf" dur.ppq="2" dur="8" oct="3" pname="g" stem.dir="up" />
+                                    <note xml:id="nh0l2pf" dur.ppq="2" dur="8" oct="3" pname="g" stem.dir="up" color="red" />
                                  </rdg>
                               </app>
                            </beam>
@@ -2421,7 +2421,7 @@
                                     </note>
                                  </rdg>
                                  <rdg source="#MC988aB7F3P1">
-                                    <note xml:id="n1oiczzl" breaksec="1" dur.ppq="1" dur="16" oct="3" pname="a" stem.dir="up">
+                                    <note xml:id="n1oiczzl" breaksec="1" dur.ppq="1" dur="16" oct="3" pname="a" stem.dir="up" color="red">
                                        <accid xml:id="a8s81ar" accid="f" />
                                     </note>
                                  </rdg>
@@ -3096,7 +3096,7 @@
                                  <beam xml:id="b1v6z2xp">
                                     <note xml:id="nf0ft43" dur.ppq="1" dur="16" oct="4" pname="b" stem.dir="up">
                                        <accid xml:id="a1odmzms" accid="f" />
-                                       <artic xml:id="awkumh6" type="technical" artic="dnbow" />
+                                       <artic xml:id="awkumh6" type="technical" artic="dnbow" color="red"/>
                                     </note>
                                     <note xml:id="n1uwy2rg" breaksec="1" dur.ppq="1" dur="16" oct="4" pname="a" stem.dir="up" />
                                     <note xml:id="n5tuk9n" dur.ppq="2" dur="8" oct="4" pname="g" stem.dir="up">
@@ -3121,14 +3121,14 @@
                                        <accid xml:id="a3las0i" accid="n" />
                                     </note>
                                     <note xml:id="n5smxao" dur.ppq="1" dur="16" oct="4" pname="e" stem.dir="down">
-                                       <artic xml:id="a1qwlzma" artic="stacc" />
+                                       <artic xml:id="a1qwlzma" artic="stacc" color="red"/>
                                     </note>
                                  </beam>
                                  <beam xml:id="b1s6by9">
                                     <note xml:id="noeipds" dots="1" dur.ppq="3" dur="8" oct="4" pname="g" stem.dir="down" />
                                     <note xml:id="nknhs42" dur.ppq="1" dur="16" oct="4" pname="g" stem.dir="down">
                                        <accid xml:id="a1x51t3x" accid="f" />
-                                       <artic xml:id="a1lgc9o4" artic="stacc" />
+                                       <artic xml:id="a1lgc9o4" artic="stacc" color="red" />
                                     </note>
                                  </beam>
                               </layer>
@@ -3193,7 +3193,7 @@
                                        <artic xml:id="a1646gyg" type="technical" artic="upbow" />
                                     </rdg>
                                     <rdg source="#MC988aB7F3P1">
-                                       <artic type="technical" artic="dnbow" />
+                                       <artic type="technical" artic="dnbow" color="red" />
                                     </rdg>
                                  </app>
                               </note>
@@ -3569,7 +3569,7 @@
                                     </note>
                                  </rdg>
                                  <rdg source="#MC988aB7F3P1">
-                                    <note dur.ppq="1" dur="16" oct="4" pname="c" stem.dir="up">
+                                    <note dur.ppq="1" dur="16" oct="4" pname="c" stem.dir="up" color="red">
                                        <accid accid="n" />
                                     </note>
                                  </rdg>
